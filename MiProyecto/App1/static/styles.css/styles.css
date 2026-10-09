@@ -1,0 +1,110 @@
+body {
+  background-color: white;
+}/* ==========================================================================
+   Variables Globales y Reset
+   ========================================================================== */
+:root {
+    --bg-primary: #0a0a0a;       /* Negro profundo estilo Mercedes */
+    --bg-card: #181818;          /* Gris oscuro para elementos flotantes */
+    --text-primary: #f5f5f5;     /* Blanco suave para textos principales */
+    --text-secondary: #a0a0a0;   /* Gris claro para descripciones */
+    --accent-silver: #d4d4d4;    /* Tono plateado metálico */
+    --accent-blue: #00a3e0;      /* Azul eléctrico de la línea EQ */
+    --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   Sección Hero (Encabezado Principal)
+   ========================================================================== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid #222;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   Contenedor y Grid de Tarjetas (Modelos)
+   ========================================================================== */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    width: 100%;
+}
+
+.destacados h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--accent-blue);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Layout responsivo usando CSS Grid */
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tarjeta-auto {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #252525;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover estilo premium */
+.tarjeta-auto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 163, 224, 0.15);
+    border-color: var(--accent-blue);
+}
+
+.tarjeta-auto h3 {
+    font-size: 1.4rem;
+    color: var(--accent-silver);
+    margin-bottom: 10px;
+}
+
+.tarjeta-auto p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}

@@ -1,0 +1,251 @@
+{% extends 'App1/base.html' %}
+{% load static %}
+
+{% block titulo %}Aura Autos | Mercedes-Benz - Colección 2026{% endblock titulo %}
+
+{% block codigoDinamico %}
+<!-- 1. Encabezado de Bienvenida / Hero -->
+<header class="hero">
+    <h1>Bienvenido al mundo Mercedes-Benz</h1>
+    <p>Innovación, lujo y rendimiento en cada detalle.</p>
+</header>
+
+<main class="container">
+    
+    <!-- 2. Sección del Catálogo General -->
+    <section class="intro">
+        <h1>Colección 2026</h1>
+        <p>Diseño sin distracciones. Rendimiento sin concesiones.</p>
+    </section>
+
+    <!-- Cuadrícula de Vehículos -->
+    <section class="cars-grid">
+        <article class="car-card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=800&auto=format&fit=crop" alt="Modelo Vision">
+            </div>
+            <div class="car-card-body">
+                <div class="card-header-info">
+                    <h2>Modelo Vision</h2>
+                    <span class="price-tag">$85,000 USD</span>
+                </div>
+                <p>Sedán eléctrico de lujo con diseño aerodinámico y tecnología autónoma nivel 3.</p>
+                <div class="card-actions">
+                    <a href="#detalle-vision" class="btn btn-primary">Ver Ficha Técnica ↓</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <hr class="separator" style="margin: 60px 0; border: 0; border-top: 1px solid #e5e5e5;">
+
+    <!-- 3. Sección de Ficha Técnica Detallada -->
+    <section id="detalle-vision" class="car-detail">
+        <div class="car-detail-image">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop" alt="Modelo Vision Detalle">
+        </div>
+
+        <div class="car-detail-info">
+            <div class="detail-header">
+                <h1>Modelo Vision</h1>
+                <span class="price-tag-large">$85,000 USD <small>(Modelo 2026)</small></span>
+            </div>
+            <p class="subtitle">El futuro de la movilidad eléctrica minimalista.</p>
+
+            <h2>Especificaciones Técnicas</h2>
+            <table class="specs-table">
+                <tr>
+                    <th>Motorización</th>
+                    <td>Doble Motor Eléctrico (AWD)</td>
+                </tr>
+                <tr>
+                    <th>Potencia</th>
+                    <td>450 CV</td>
+                </tr>
+                <tr>
+                    <th>Aceleración (0-100 km/h)</th>
+                    <td>3.4 segundos</td>
+                </tr>
+                <tr>
+                    <th>Autonomía</th>
+                    <td>620 km (ciclo WLTP)</td>
+                </tr>
+                <tr>
+                    <th>Precio sugerido (2026)</th>
+                    <td><strong>$85,000 USD</strong></td>
+                </tr>
+            </table>
+
+            <div class="actions" style="margin-top: 20px;">
+                <a href="https://www.mercedes-benz.com" target="_blank" class="btn btn-primary">Sitio Oficial ↗</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endblock codigoDinamico %}
+
+<!-- Estilos para Botones Minimalistas -->
+<style>
+    /* Contenedor de botones prompt */
+    .prompt-container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+    }
+
+    /* Botón Principal (Primary Prompt) */
+    .btn-prompt-primary {
+        background-color: #111111;
+        color: #ffffff;
+        border: 1px solid #111111;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+
+    .btn-prompt-primary:hover {
+        background-color: #333333;
+        border-color: #333333;
+    }
+
+    /* Botón Secundario (Secondary Prompt) */
+    .btn-prompt-secondary {
+        background-color: transparent;
+        color: #111111;
+        border: 1px solid #e5e5e5;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+
+    .btn-prompt-secondary:hover {
+        border-color: #111111;
+    }
+
+    /* Ajuste para pantallas pequeñas */
+    @media (max-width: 600px) {
+        .prompt-container {
+            flex-direction: column;
+        }
+        .btn-prompt-primary, .btn-prompt-secondary {
+            text-align: center;
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Estructura HTML de los Botones -->
+<div class="prompt-container">
+    <!-- Botón de acción principal -->
+    <a href="#" class="btn-prompt-primary">Explorar Modelos</a>
+
+    <!-- Botón de acción secundaria / enlace al panel -->
+    <a href="/gestion/" class="btn-prompt-secondary">Panel de Administración</a>
+</div>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Carrito de Compras</title>
+    <!-- Tailwind CSS desde CDN para estilos rápidos y modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600 flex items-center gap-2">
+                <i data-lucide="store"></i> Mi Tienda
+            </h1>
+            
+            <!-- Botón para abrir el panel del carrito -->
+            <button id="open-cart-btn" class="relative bg-indigo-50 hover:bg-indigo-100 text-indigo-600 px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
+                <i data-lucide="shopping-bag"></i>
+                <span class="font-semibold">Carrito</span>
+                <!-- Badge con contador de ítems -->
+                <span id="cart-badge" class="bg-indigo-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal: Catálogo de Productos -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <h2 class="text-xl font-bold mb-6 text-gray-700">Productos Disponibles</h2>
+        
+        <!-- Cuadrícula donde se renderizarán los productos -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Los productos se cargan dinámicamente desde JS -->
+        </div>
+    </main>
+
+    <!-- Panel Lateral del Carrito (Overlay + Drawer) -->
+    <div id="cart-modal" class="fixed inset-0 z-50 invisible transition-opacity duration-300">
+        <!-- Fondo oscuro semitransparente -->
+        <div id="cart-overlay" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300"></div>
+
+        <!-- Panel Deslizable -->
+        <div id="cart-drawer" class="absolute top-0 right-0 w-full max-w-md h-full bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+            
+            <!-- Cabecera del Carrito -->
+            <div class="p-4 border-b flex justify-between items-center bg-gray-50">
+                <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                    <i data-lucide="shopping-cart"></i> Tu Carrito
+                </h3>
+                <button id="close-cart-btn" class="text-gray-400 hover:text-gray-600 p-1">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <!-- Lista de productos dentro del carrito -->
+            <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-4">
+                <!-- Se llena dinámicamente con JS -->
+            </div>
+
+            <!-- Pie del Carrito: Resumen y Finalizar Compra -->
+            <div class="p-4 border-t bg-gray-50 space-y-3">
+                <div class="space-y-1 text-sm text-gray-600">
+                    <div class="flex justify-between">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal" class="font-medium">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>IVA (21%):</span>
+                        <span id="cart-tax" class="font-medium">$0.00</span>
+                    </div>
+                    <div class="flex justify-between text-base font-bold text-gray-900 pt-2 border-t">
+                        <span>Total:</span>
+                        <span id="cart-total" class="text-indigo-600">$0.00</span>
+                    </div>
+                </div>
+
+                <button id="checkout-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                    <i data-lucide="credit-card"></i> Proceder al Pago
+                </button>
+                <button id="clear-cart-btn" class="w-full text-sm text-red-500 hover:text-red-700 font-medium py-1">
+                    Vaciar carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de la lógica del carrito -->
+    <script src="cart.js"></script>
+</body>
+</html>

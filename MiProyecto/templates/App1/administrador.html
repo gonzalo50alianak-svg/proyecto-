@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Interno | AURA MOTORS</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color: #f4f5f7; color: #222; }
+        
+        .dashboard { display: flex; min-height: 100vh; }
+        .sidebar { width: 240px; background: #1a1d20; color: #fff; padding: 2rem 1rem; }
+        .sidebar h2 { font-size: 1rem; letter-spacing: 1px; margin-bottom: 2rem; color: #8a94a6; text-transform: uppercase; }
+        .sidebar ul { list-style: none; }
+        .sidebar li a { color: #2b70d6; text-decoration: none; display: block; padding: 0.75rem 0; font-size: 0.9rem; }
+        .sidebar li a:hover { color: #fff; }
+
+        .content { flex: 1; padding: 2.5rem; }
+        .header-title { font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 400; }
+
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+        .metric-card { background: #fff; border-radius: 4px; padding: 1.2rem; border: 1px solid #e2e8f0; }
+        .metric-card span { font-size: 0.8rem; color: #64748b; text-transform: uppercase; }
+        .metric-card p { font-size: 1.8rem; font-weight: 600; margin-top: 0.5rem; }
+
+        .table-container { background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+        th, td { padding: 1rem; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f8fafc; color: #475569; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .dashboard { flex-direction: column; }
+            .sidebar { width: 100%; min-height: auto; padding: 1rem; }
+            .content { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>Gestión Interna</h2>
+            <ul>
+                <li><a href="#">• Dashboard</a></li>
+                <li><a href="#">• Inventario Unidades</a></li>
+                <li><a href="#">• Bitácora Mecánica</a></li>
+                <li><a href="#">• Reportes</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1 class="header-title">Panel de Control de Flota</h1>
+
+            <div class="metrics">
+                <div class="metric-card">
+                    <span>Unidades en Stock</span>
+                    <p>24</p>
+                </div>
+                <div class="metric-card">
+                    <span>Revisiones Pendientes</span>
+                    <p>3</p>
+                </div>
+                <div class="metric-card">
+                    <span>Ventas del Mes</span>
+                    <p>12</p>
+                </div>
+            </div>
+
+            <h2 style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 500;">Bitácora Reciente</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Observación</th>
+                            <th>Km</th>
+                            <th>Estado Mecánico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AUT-092</td>
+                            <td>Cambio de aceite y filtros efectuado</td>
+                            <td>15,200</td>
+                            <td style="color: green;">Aprobado</td>
+                        </tr>
+                        <tr>
+                            <td>AUT-104</td>
+                            <td>Inspección de sistema de frenos</td>
+                            <td>42,100</td>
+                            <td style="color: orange;">Pendiente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

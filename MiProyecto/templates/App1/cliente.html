@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionaria | Catálogo Exclusivo</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color: #f9f9f9; color: #111; line-height: 1.6; }
+        header { background: #111; color: #fff; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; }
+        nav a { color: #ccc; text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; }
+        nav a:hover { color: #fff; }
+        
+        .hero { text-align: center; padding: 4rem 1rem; background: #fff; border-bottom: 1px solid #eaeaea; }
+        .hero h2 { font-size: 2.5rem; font-weight: 300; margin-bottom: 1rem; }
+        .hero p { color: #666; max-width: 600px; margin: 0 auto; }
+
+        .catalog { max-width: 1100px; margin: 3rem auto; padding: 0 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        
+        .card { background: #fff; border: 1px solid #eaeaea; border-radius: 4px; padding: 1.5rem; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-4px); }
+        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .card .price { font-size: 1.1rem; font-weight: bold; color: #333; margin-top: 1rem; }
+        
+        footer { text-align: center; padding: 2rem; color: #888; font-size: 0.8rem; border-top: 1px solid #eaeaea; margin-top: 4rem; }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 1rem; text-align: center; }
+            nav a { margin: 0 0.5rem; }
+            .hero h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AURA MOTORS</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Modelos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Ingeniería y Elegancia</h2>
+        <p>Descubre nuestra selección de vehículos diseñados para ofrecer una experiencia de conducción superior.</p>
+    </section>
+
+    <main class="catalog">
+        <div class="grid">
+            <div class="card">
+                <h3>Sedán Executive 2026</h3>
+                <p>Motor 2.0 Turbo • Transmisión Automática</p>
+                <p class="price">$42,500 USD</p>
+            </div>
+            <div class="card">
+                <h3>SUV Sport Hybrid</h3>
+                <p>Tracción AWD • Eficiencia Eléctrica</p>
+                <p class="price">$55,000 USD</p>
+            </div>
+            <div class="card">
+                <h3>Coupe Performance</h3>
+                <p>450 HP • Acabados en Fibra de Carbono</p>
+                <p class="price">$68,900 USD</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 AURA MOTORS. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

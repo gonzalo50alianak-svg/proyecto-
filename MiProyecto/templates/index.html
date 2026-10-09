@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA MOTORS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: #ffffff; color: #111111; line-height: 1.5; padding: 2rem; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eeeeee; padding-bottom: 1.5rem; }
+        .brand { font-size: 0.9rem; letter-spacing: 0.2rem; font-weight: 600; }
+        .links a { color: #666666; text-decoration: none; font-size: 0.85rem; margin-left: 2rem; }
+        
+        header { margin: 6rem 0; max-width: 600px; }
+        header h1 { font-size: 2.5rem; font-weight: 300; letter-spacing: -0.05rem; }
+        header p { color: #666666; font-size: 0.95rem; margin-top: 1rem; }
+
+        .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 6rem; }
+        .item { border: 1px solid #0f8bdd; padding: 2rem; }
+        .item-title { font-size: 1rem; font-weight: 500; }
+        .item-spec { font-size: 0.8rem; color: #eb1414; margin: 0.5rem 0 1.5rem 0; }
+        .item-price { font-size: 0.9rem; font-weight: 600; }
+
+        footer { border-top: 1px solid #eeeeee; pt: 2rem; padding-top: 2rem; font-size: 0.75rem; color: #aaaaaa; }
+
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            header { margin: 3rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="brand">AURA</div>
+        <div class="links">
+            <a href="#">Modelos</a>
+            <a href="#">Contacto</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Vehículos esenciales.</h1>
+        <p>Catálogo de autos de alta gama bajo un enfoque minimalista e ingeniería de precisión.</p>
+    </header>
+
+    <main class="catalog">
+        <div class="item">
+            <div class="item-title">Sedán Executive</div>
+            <div class="item-spec">Año 2026 • Motor 2.0 T</div>
+            <div class="item-price">$42,500 USD</div>
+        </div>
+        <div class="item">
+            <div class="item-title">SUV Sport</div>
+            <div class="item-spec">Año 2026 • Híbrido AWD</div>
+            <div class="item-price">$55,000 USD</div>
+        </div>
+        <div class="item">
+            <div class="item-title">Coupe Performance</div>
+            <div class="item-spec">Año 2026 • 450 HP</div>
+            <div class="item-price">$68,900 USD</div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 AURA MOTORS. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Interno | AURA</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: #fafafa; color: #111111; padding: 2rem; }
+        
+        .container { max-width: 1000px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e5e5; padding-bottom: 1.5rem; margin-bottom: 3rem; }
+        h1 { font-size: 1.1rem; font-weight: 500; letter-spacing: 0.05rem; }
+        .user { font-size: 0.8rem; color: #777777; }
+
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+        .card { background: #ffffff; border: 1px solid #e5e5e5; padding: 1.5rem; }
+        .card-label { font-size: 0.75rem; color: #777777; text-transform: uppercase; }
+        .card-value { font-size: 1.8rem; font-weight: 300; margin-top: 0.5rem; }
+
+        .table-section { background: #ffffff; border: 1px solid #e5e5e5; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+        th, td { padding: 1rem 1.5rem; border-bottom: 1px solid #f0f0f0; }
+        th { font-weight: 500; color: #555555; background: #fafafa; }
+        tr:last-child td { border-bottom: none; }
+
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .metrics { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AURA / Gestión de Flota</h1>
+            <div class="user">Administrador</div>
+        </header>
+
+        <section class="metrics">
+            <div class="card">
+                <div class="card-label">Unidades</div>
+                <div class="card-value">24</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Revisiones</div>
+                <div class="card-value">03</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Ventas Mes</div>
+                <div class="card-value">12</div>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Observación</th>
+                        <th>Kilometraje</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AUT-092</td>
+                        <td>Mantenimiento de rutina completado</td>
+                        <td>15,200 km</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr>
+                        <td>AUT-104</td>
+                        <td>Revisión de sistema de frenos</td>
+                        <td>42,100 km</td>
+                        <td>Pendiente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
